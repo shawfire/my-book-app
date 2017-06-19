@@ -10,7 +10,7 @@ const Book = require('./models/bookModel');
 const app = express();
 
 // Get the port number from the ENV variable PORT otherwise set it to 3000
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 7000;
 
 // Use middleware
 app.use(bodyParser.urlencoded({ extended: true }));

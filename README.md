@@ -1,5 +1,6 @@
 # my-book-app
 
+# my-book-api
 [yarn global reference](https://yarnpkg.com/lang/en/docs/cli/global/)
 yarn global <add/bin/ls/remove/upgrade> [--prefix]
 
@@ -34,10 +35,10 @@ Terminal 2:
 yarn dev
 ```
 
-
 Terminal 3:
 ```
 mongod
+or brew services start mongodb
 ```
 
 Terminal 4:
@@ -49,4 +50,23 @@ db.books.insert({title: "Les Misérables", genre: "Historical Fiction", author: 
 db.books.insert({title: "The Time Machine", genre: "Science Fiction", author: "H. G. Wells", read: false})
 db.books.insert({title: "A Journey into the Center of the Earth", genre: "Science Fiction", author: "Jules Verne", read: false})
 db.books.insert({title: "The Dark World", genre: "Fantasy", author: "Henry Kuttner", read: false})
+
+db.books.find()
+db.books.find({genre:"Fantasy"})
 ```
+
+#my-book-web
+[Express API + React Web part 1](https://www.youtube.com/watch?v=aB3ZNoa7wYo&feature=youtu.be)
+[Monorepos in Git](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/)
+```
+cd ~/my-book-app
+yarn create react-app react-web
+cd !$
+yarn start
+http://localhost:3000
+Ctrl-Alt-J
+  Fetch API cannot load http://localhost:3000/api/books. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:3001' is therefore not allowed access. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Refer to create react-app README and Add proxy in package.json to api port and
+access the api from the web project as if it was local.
+```
+
