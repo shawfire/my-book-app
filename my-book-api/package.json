@@ -6,9 +6,7 @@
     "author": "John Shaw",
     "license": "MIT",
     "dependencies": {
-        "express": "^4.15.3",
-        "gulp": "^3.9.1",
-        "gulp-nodemon": "^2.2.1"
+        "express": "^4.15.3"
     },
     "scripts": {
         "dev": "nodemon app.js"
