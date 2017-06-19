@@ -20,6 +20,11 @@ http://localhost:3000
 
 yarn add nodemon --dev
 
+brew install mongodb
+brew services start mongodb
+
+yarn add mongoose
+
 ```
 
 Terminal 2:
