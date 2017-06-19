@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import BookList from './components/BookList'
 
 class App extends Component {
   state = {
@@ -18,8 +19,8 @@ class App extends Component {
             // ![] = false
             // !![] = true (data loaded)
             !!books ? (
-                books.length
-            ) : (
+                <BookList items={ books } />
+             ) : (
                 'Loading books...'
             )
         }
