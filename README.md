@@ -17,7 +17,7 @@ Terminal 1:
 
 yarn add express --save
 node app.js
-http://localhost:3000
+http://localhost:7000
 
 yarn add nodemon --dev
 
@@ -67,7 +67,7 @@ cd !$
 yarn start
 http://localhost:3000
 Ctrl-Alt-J
-  Fetch API cannot load http://localhost:3000/api/books. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:3001' is therefore not allowed access. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+  Fetch API cannot load http://localhost:3000/api/books. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:7000' is therefore not allowed access. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
 Refer to create react-app README and Add proxy in package.json to api port and
 access the api from the web project as if it was local.
 ```
