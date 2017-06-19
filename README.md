@@ -25,6 +25,8 @@ brew services start mongodb
 
 yarn add mongoose
 
+yarn add body-parser
+
 ```
 
 Terminal 2:
@@ -41,4 +43,10 @@ mongod
 Terminal 4:
 ```
 mongo
+use bookAPI
+db.books.insert({title: "War and Peace", genre: "Historical Fiction", author: "Lev Nikolayevich Tolstoy", read: false})
+db.books.insert({title: "Les Misérables", genre: "Historical Fiction", author: "Victor Hugo", read: false})
+db.books.insert({title: "The Time Machine", genre: "Science Fiction", author: "H. G. Wells", read: false})
+db.books.insert({title: "A Journey into the Center of the Earth", genre: "Science Fiction", author: "Jules Verne", read: false})
+db.books.insert({title: "The Dark World", genre: "Fantasy", author: "Henry Kuttner", read: false})
 ```
