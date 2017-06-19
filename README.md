@@ -55,8 +55,10 @@ db.books.find()
 db.books.find({genre:"Fantasy"})
 ```
 
-#my-book-web
+# my-book-web
 [Express API + React Web part 1](https://www.youtube.com/watch?v=aB3ZNoa7wYo&feature=youtu.be)
+[Express API + React Web part 2](https://www.youtube.com/watch?v=oPZpqUjc6CQ&feature=youtu.be)
+[React+Express App Example](https://github.com/BurntCaramel/portfolio-planner-react-express)
 [Monorepos in Git](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/)
 ```
 cd ~/my-book-app
