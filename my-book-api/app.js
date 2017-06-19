@@ -1,5 +1,3 @@
-var express = require('express');
-
 var express = require('express'),
     mongoose = require('mongoose');
 
@@ -18,7 +16,8 @@ var bookRouter = express.Router();
 
 bookRouter.route("/Books")
     .get(function(request, response) {
-        Book.find(function(err, books) {
+        var query = request.query;
+        Book.find(query, function(err, books) {
             if (err) {
                 response.status(500).send(err);
             } else {
