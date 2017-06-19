@@ -13,15 +13,15 @@ class App extends Component {
     return (
       <div className="App">
         {
-          // !null = true
-          // !!null = false (waiting for data to load)
-          // ![] = false
-          // !![] = true (data loaded)
-          !!books ? (
-            books.length
-          ) : (
-            'Loading books...'
-          )
+            // !null = true
+            // !!null = false (waiting for data to load)
+            // ![] = false
+            // !![] = true (data loaded)
+            !!books ? (
+                books.length
+            ) : (
+                'Loading books...'
+            )
         }
       </div>
     );
@@ -29,17 +29,20 @@ class App extends Component {
 
   // Run after our component instance first appears on screen
   componentDidMount() {
-    // Load books from API - via proxy set in package.json
-    // 'http://localhost:7000/api/books'
-    // 'http://localhost:3000/api/books'
+    // Load projects from API
     fetch('/api/books')
-      .then(res => res.json)
+      // Parsing the JSON into JavaScript objects
+      .then(res => res.json())
+      // Update our component’s state with the loaded projects
       .then(json => {
+        // Changing the state will re-render the component
         this.setState({
           books: json
         })
       })
   }
+
+
 }
 
 export default App;
