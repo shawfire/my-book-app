@@ -6,14 +6,14 @@ export default function BookList({
 }) {
     return (
         <div>
-        {
-            items.map((item, index) => (
-                <Book key={ item._id }
-                    title={ item.title }
-                    author={ item.author }
-                />
-            ))
-        }
+          {
+              items.map((item, index) => (
+                  <Book key={ item._id }
+                      title={ item.title }
+                      author={ item.author }
+                  />
+              ))
+          }
         </div>
     )
 }

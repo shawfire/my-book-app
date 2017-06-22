@@ -1,4 +1,5 @@
 import React from 'react'
+// import BookFormContainer from './BookFormContainer'
 
 export default function Book({
     title,
@@ -6,10 +7,13 @@ export default function Book({
 }) {
     return (
         <div>
-            <h2>{ title }</h2>
-            { 
-              author ? <h4>by: { author }</h4> : ""
-            }
+            {/*<BookFormContainer />*/}
+            <div>
+                <h2>{ title }</h2>
+                { 
+                author ? <h4>by: { author }</h4> : ""
+                }
+            </div>
         </div>
     )
 }

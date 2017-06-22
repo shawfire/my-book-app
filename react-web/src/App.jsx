@@ -1,31 +1,55 @@
 import React, { Component } from 'react';
 import './App.css';
 import BookList from './components/BookList'
+// import BookFormContainer from './components/BookFormContainer'
+import CreateBookForm from './components/CreateBookForm'
 
 class App extends Component {
   state = {
+    error: null,
     books: null
+  }
+
+  handleCreateBook = ({ title }) => {
+    fetch('/api/books', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ title })
+    }) 
+    .then(res => res.json())
+    .then(newBook => {
+        this.setState((prevState) => {
+          // Update local state with new book added to end
+          return {
+            books: prevState.books.concat(newBook)
+          }
+        })
+      })
+      .catch(error => {
+        this.setState({ error })
+      })   
   }
 
   render() {
     //const books = this.state.books
-    const { books } = this.state
+    const { error, books } = this.state
 
     return (
       <div className="App">
-        {
-            // !null = true
-            // !!null = false (waiting for data to load)
-            // ![] = false
-            // !![] = true (data loaded)
-            !!books ? (
+        {/*<BookFormContainer />*/}
+        <div>
+            { !!error && <p>{ error.message }</p> }
+            <CreateBookForm onCreate={ this.handleCreateBook } />
+            { 
+              !!books ? (
                 <BookList items={ books } />
-             ) : (
+              ) : (
                 'Loading books...'
             )
-        }
+            }
+        </div>
       </div>
-    );
+    )
   }
 
   // Run after our component instance first appears on screen
@@ -41,8 +65,10 @@ class App extends Component {
           books: json
         })
       })
+      .catch(error => {
+        this.setState({ error })
+      })
   }
-
 
 }
 

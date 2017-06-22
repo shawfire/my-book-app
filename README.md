@@ -60,6 +60,11 @@ db.books.find({genre:"Fantasy"})
 [Express API + React Web part 2](https://www.youtube.com/watch?v=oPZpqUjc6CQ&feature=youtu.be)
 [React+Express App Example](https://github.com/BurntCaramel/portfolio-planner-react-express)
 [Monorepos in Git](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/)
+[movies-express-mongodb react-b branch](https://github.com/Coder-Academy-Patterns/movies-express-mongodb)
+[Express Auth MongoDB part 1](https://www.youtube.com/watch?v=0zPCLOikYAQ&feature=youtu.be)
+[React Express MongoDB part 1](https://www.youtube.com/watch?v=67BFclcwm-A&feature=youtu.be)
+[React Express MongoDB part 2](https://www.youtube.com/watch?v=7kCRoJwAo3I&feature=youtu.be)
+
 ```
 cd ~/my-book-app
 yarn create react-app react-web
