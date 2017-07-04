@@ -7,7 +7,7 @@ export default function Field({
   return (
       <label> 
         { label + ' ' }
-        <input name='title' />
+        <input name={name} />
       </label>
   )
 }

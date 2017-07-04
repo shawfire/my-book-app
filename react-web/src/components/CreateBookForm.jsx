@@ -6,8 +6,10 @@ function handleSubmit(event, onCreate) {
   // Get <form> 
   const form  = event.target
   const title = form.elements['title'].value
-  console.log(title)
-  onCreate({title})
+  const author = form.elements['author'].value
+  const genre = form.elements['genre'].value
+  console.log(title, author, genre)
+  onCreate({title, author, genre})
 }
 
 export default function CreateBookForm({
@@ -16,6 +18,8 @@ export default function CreateBookForm({
   return (
     <form onSubmit={ (event) => handleSubmit(event, onCreate) }>
        <Field label='Title' name='title' />
+       <Field label='Author' name='author' />
+       <Field label='Genre' name='genre' />
       <button type='submit'> 
         Create Book
       </button>   

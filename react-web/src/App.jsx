@@ -10,18 +10,18 @@ class App extends Component {
     books: null
   }
 
-  handleCreateBook = ({ title }) => {
+  handleCreateBook = ({ title, author, genre }) => {
     fetch('/api/books', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ title })
+      body: JSON.stringify({ title, author, genre })
     }) 
     .then(res => res.json())
     .then(newBook => {
         this.setState((prevState) => {
-          // Update local state with new book added to end
+          // Update local state with new book added the start
           return {
-            books: prevState.books.concat(newBook)
+            books: [ newBook ].concat(prevState.books)
           }
         })
       })

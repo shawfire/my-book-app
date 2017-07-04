@@ -28,15 +28,19 @@ yarn add mongoose
 
 yarn add body-parser
 
+cd react-web
+yarn start
 ```
 
 Terminal 2:
 ```
+cd my-book-api/
 yarn dev
 ```
 
 Terminal 3:
 ```
+cd my-book-api/
 mongod
 or brew services start mongodb
 ```
@@ -55,16 +59,7 @@ db.books.find()
 db.books.find({genre:"Fantasy"})
 ```
 
-# my-book-web
-[Express API + React Web part 1](https://www.youtube.com/watch?v=aB3ZNoa7wYo&feature=youtu.be)
-[Express API + React Web part 2](https://www.youtube.com/watch?v=oPZpqUjc6CQ&feature=youtu.be)
-[React+Express App Example](https://github.com/BurntCaramel/portfolio-planner-react-express)
-[Monorepos in Git](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/)
-[movies-express-mongodb react-b branch](https://github.com/Coder-Academy-Patterns/movies-express-mongodb)
-[Express Auth MongoDB part 1](https://www.youtube.com/watch?v=0zPCLOikYAQ&feature=youtu.be)
-[React Express MongoDB part 1](https://www.youtube.com/watch?v=67BFclcwm-A&feature=youtu.be)
-[React Express MongoDB part 2](https://www.youtube.com/watch?v=7kCRoJwAo3I&feature=youtu.be)
-
+Terminal 5:
 ```
 cd ~/my-book-app
 yarn create react-app react-web
@@ -76,4 +71,43 @@ Ctrl-Alt-J
 Refer to create react-app README and Add proxy in package.json to api port and
 access the api from the web project as if it was local.
 ```
+
+## References:
+* [Express API + React Web part 1](https://www.youtube.com/watch?v=aB3ZNoa7wYo&feature=youtu.be)
+* [Express API + React Web part 2](https://www.youtube.com/watch?v=oPZpqUjc6CQ&feature=youtu.be)
+* [React+Express App Example](https://github.com/BurntCaramel/portfolio-planner-react-express)
+* [Monorepos in Git](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/)
+  * [movies-express-mongodb react-b branch](https://github.com/Coder-Academy-Patterns/movies-express-mongodb)
+* [Express Auth MongoDB part 1](https://www.youtube.com/watch?v=0zPCLOikYAQ&feature=youtu.be)
+  * [movies-express-mongodb auth2 branch](https://github.com/Coder-Academy-Patterns/movies-express-mongodb/tree/auth2)
+* [React Express Require Authorization part 2 — Roles](https://www.youtube.com/watch?v=7mYr4lnZKuQ&feature=youtu.be)
+* [React Express MongoDB part 1](https://www.youtube.com/watch?v=67BFclcwm-A&feature=youtu.be)
+
+* [React Express MongoDB part 2](https://www.youtube.com/watch?v=7kCRoJwAo3I&feature=youtu.be)
+* [fetchJSON helper](https://github.com/Coder-Academy-Patterns/movies-express-mongodb/blob/react-auth/react-web/src/api/fetchJSON.js)
+* [fetchJSON usage](https://github.com/Coder-Academy-Patterns/movies-express-mongodb/blob/react-auth/react-web/src/api/movies.js)
+
+
+* [React & NodeJS](https://coder-academy.thinkific.com/courses/react-node-js)
+* [Express API JWT + React part 1](https://www.youtube.com/watch?v=kNHVkDUzYfg&feature=youtu.be)
+* [Refactor using axios instead of fetch](https://github.com/mzabriskie/axios)
+* [React.js Forms: Controlled Components](http://lorenstewart.me/2016/10/31/react-js-forms-controlled-components/)
+* [Moz Page Speed guide:](https://moz.com/learn/seo/page-speed)
+* [ImageOptim — better Save for Web](https://imageoptim.com/mac)
+* [Deploy Node API and React App to Now](https://www.youtube.com/watch?v=GsjloDH8H3M&feature=youtu.be)
+* [Introduction to ARIA - Google Accessibility](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
+
+* [React Accessibility](https://facebook.github.io/react/docs/accessibility.html)
+* [React Router 4](https://www.youtube.com/watch?v=jPRWOKZltFc&feature=youtu.be)
+
+* [React Todo List](https://www.youtube.com/watch?v=v51sBEvBaV0&feature=youtu.be)
+
+* [React Express Require Authorization part 1 - from react-router branch to roles](https://www.youtube.com/watch?v=CBY1Irxx7dw&feature=youtu.be)
+
+## Notes:
+updatePromises = ...map()
+Promise.all(updatePromises)
+now
+now alias ... cafe-up-again
+
 

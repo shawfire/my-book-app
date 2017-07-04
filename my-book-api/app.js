@@ -27,5 +27,5 @@ app.get('/', (request, response) => {
 
 // Start listening on the port
 app.listen(port, () => {
-    console.log('Gulp is running my app on PORT: ' + port);
+    console.log('My-book-api server is running my app on PORT: ' + port);
 });
